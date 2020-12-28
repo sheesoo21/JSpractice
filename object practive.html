@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+          
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <h1>Object</h1>
+
+        <h2>Create</h2>
+        <script>
+        var coworkers = {
+            "programmer" : "Heesoo",
+            "designer" : "Nara"
+        } // coworker란 객체를 생성하여 페어링시킴
+
+        const {programmer, designer} = coworkers;
+        console.log(programmer, designer);
+
+        document.write("Programmer : "+ coworkers.programmer+"<br>");
+        document.write("Designer :" + coworkers.designer+"<br>");
+        coworkers.analyst = "LeeJ"; //객체에 새 속성 추가
+        document.write("Analyst :" + coworkers.analyst+"<br>");
+        coworkers["data scientist"] = "Hyeyoung";
+        document.write("Data scientist :"+coworkers["data scientist"]);
+
+        </script>
+        <h1>Iterate</h1>
+        <script>
+            for(var key in coworkers){
+                document.write(key+" : ")
+                document.write(coworkers[key]+"<br>");                
+            }
+        </script>
+       <h2>Property & Method</h2>
+       <script>
+           coworkers.showAll = function(){
+            for(var key in this){
+              if(key == "showAll"){
+                  continue;
+              }else{
+                document.write(key+" : ")
+                document.write(this[key]+"<br>");                
+              }
+            }
+           }
+        //객체에 소속된 함수를 메써드라고 하고 객체에 소속된 변수를 프로퍼티라고 한다.
+        
+        coworkers.showAll();
+
+       </script>
+    </body>
+</html>

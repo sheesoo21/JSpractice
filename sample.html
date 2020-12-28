@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <style>
+             .header{
+                 
+                 color : rgb(11, 25, 104);
+                 padding : 40px;
+                                  
+             }
+             .headerborder{
+                border: thick dotted #f57a28; 
+                background-color : rgb(245, 243, 160);
+                background-image : url("C:\\Users\\shim\\Desktop\\javascript workspace\\images\\cat.jpg");
+             }
+
+             input[id="cb1"] + label {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border: 2px solid #bcbcbc;
+				cursor: pointer;
+			}
+			input[id="cb1"]:checked + label {
+				background-color: #666666;
+			}
+			input[id="cb1"] {
+				display: none;
+			}
+         </style>
+         <title></title>
+     </head>
+     <body>
+         <!-- <script>
+             document.write("hello world")             
+         </script> -->
+         <!-- <input type="button" value="hello" onclick="alert('hi')">
+         <input type="text" onchange="alert('changed')"> -->
+         <div class="headerborder">
+             <h1 class="header" text align="center" > Project Sample Header </h1>
+        </div>
+
+         <div>
+             <h1>Loop(Userid)</h1>
+                <ul>
+                    <script>
+                        var k = 0;
+                        var userid = ["kim", "park", "choi", "lee", "shim", "kang"]
+                        // document.write('<li>1</li>');
+                        // var i = 0;
+                        // while(i<3){
+                        // document.write('<li>2</li>');
+                        // document.write('<li>3</li>');
+                        // i = i+1;
+                        // }
+                        // document.write('<li>4</li>');
+                        // <li><a href="http://www.a.com"></a><li>
+                        while(k<userid.length){
+                        document.write('<li><a href="http://a.com/'+ userid[k].toUpperCase()+'">'+userid[k].toUpperCase()+'</a></li>');
+                        
+                            // '<li><a href="http://a.com/'
+                            // +
+                            // userid[k].toUpperCase()
+                            // +
+                            // '">'
+                            // +
+                            // userid[k].toUpperCase()
+                            // +
+                            // '</a></li>'
+
+                        k=k+1;
+                        }
+                    </script>
+                </ul>
+         </div>
+         <div>
+             <h1><a href="www.google.com">Google</a></h1>
+
+
+                <input type = "button" value="Night" onclick="
+                    var body = document.querySelector('body');
+                        document.body.style.background = 'black';
+                        document.body.style.color = 'white';    
+                        
+                ">
+                
+                <input type = "button" value="Day" onclick="
+                var body = document.querySelector('body');
+                document.body.style.background = 'white';
+                document.body.style.color = 'black';
+                ">
+
+                <input type = "button" id="Toggle_Tag" value="Toggle-Night" onclick="
+                    var body = document.querySelector('body');
+                if(this.value == 'Toggle-Night'){
+                    document.body.style.backgroundColor='black';
+                    document.body.style.color ='white';
+                    document.querySelector('#Toggle_Tag').value = 'Toggle-Day';
+
+                    var change_list = document.querySelectorAll('a');
+                    var list_num = 0;
+                        while(list_num<change_list.length){
+                        //change_list[list_num];
+                        change_list[list_num].style.color='orange';
+                        list_num = list_num + 1;
+                        }
+                } else {
+                    document.body.style.backgroundColor ='white';
+                    document.body.style.color ='black';
+                    document.querySelector('#Toggle_Tag').value = 'Toggle-Night'
+
+                    var change_list = document.querySelectorAll('a');
+                    var list_num = 0;
+                        while(list_num<change_list.length){
+                        //change_list[list_num];
+                        change_list[list_num].style.color='green';
+                        list_num = list_num + 1;
+                        }
+                }
+                    
+                ">         
+         </div>
+         <div>
+            <h1 style="background-color: aliceblue; color: rebeccapurple; "> Project Sample</h1>
+        
+            <script>
+                var students = ["kim", "park"];
+                document.write(students[0]+"<br>");
+                document.write(students[1]+"<br>");
+                document.write(students.length);
+            </script>
+         </div>
+
+         <h3>Checkbox</h3>
+         <input type="checkbox" id="cb1">
+         <label for="cb1"></label>
+     </body>
+ </html>
