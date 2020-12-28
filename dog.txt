@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 dog : wal wal ;
+=======
+bark;
+>>>>>>> e7c637a967589e7bc8d80077f71c8582f7e11a7e
