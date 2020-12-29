@@ -79,7 +79,8 @@ asyncCall();
  var resolveAfter2Seconds = function(){
      console.log("starting slow promise");
      return new Promise((resolve)=>{
-         setTimeout(function(){
+         setTimeout(function(){ 
+             //SetTimeout 함수는 설정한 시간이 지나면 지정해둔 함수를 호출 
              resolve(20);
              console.log("slow promise is done");
          },2000);
