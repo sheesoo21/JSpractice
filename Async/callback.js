@@ -47,8 +47,3 @@ printDelayed(()=>console.log("Print Last!"),3000);//비동기
 // console.log('3');
 /* setTimeout(function(){console.log('1초 뒤에 출력됩니다')},1000); 와 같은 의미 */
 
-
-
-
-
-//expect 1->3->1초뒤->3초뒤
