@@ -58,18 +58,35 @@ fetchNumber
 
    const getHen = () => 
       new Promise((resolve,reject)=> {
-      setTimeout(()=>resolve('hen🐓'),1000);
+      setTimeout(()=>resolve('chicken🐓'),1000);
       });
    const getEgg = hen => 
+      // new Promise((resolve,reject)=> {
+      // setTimeout(()=>resolve(`${hen} => egg🥚`,1000));
+      // });
       new Promise((resolve,reject)=> {
-      setTimeout(()=>resolve(`${hen} => egg🥚`,1000));
+      setTimeout(()=>reject(new Error(`Error! => egg🥚`)),1000);
       });
+
    const getFood = egg =>
       new Promise((resolve,reject)=> {
       setTimeout(()=>resolve(`${egg}=> Fried Egg🍳`,1000));
       });
 
    getHen()
-      .then(hen => getEgg(hen))
-      .then(egg => getFood(egg))
-      .then(meal => console.log(meal));
+      .then(hen => getEgg(hen)) // = .then(getEgg)
+      .catch(error => {
+         return '🍤';
+      })
+      .then(egg => getFood(egg)) // = .then(getFood)
+      .then(meal => console.log(meal)) // = .then(console.log)
+      
+      .catch(console.log);
+      
+
+/**
+   getHen()
+      .then(getEgg)
+      .then(getFood)
+      .then(console.log);
+*/
